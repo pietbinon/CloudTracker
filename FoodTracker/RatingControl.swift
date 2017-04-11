@@ -2,8 +2,8 @@
 //  RatingControl.swift
 //  FoodTracker
 //
-//  Created by Pierre Binon on 2017-04-10.
-//  Copyright © 2017 Pierre Binon. All rights reserved.
+//  Created by Jane Appleseed on 11/2/16.
+//  Copyright © 2016 Apple Inc. All rights reserved.
 //
 
 import UIKit

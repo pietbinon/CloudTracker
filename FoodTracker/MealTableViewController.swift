@@ -2,8 +2,8 @@
 //  MealTableViewController.swift
 //  FoodTracker
 //
-//  Created by Pierre Binon on 2017-04-11.
-//  Copyright © 2017 Pierre Binon. All rights reserved.
+//  Created by Jane Appleseed on 11/15/16.
+//  Copyright © 2016 Apple Inc. All rights reserved.
 //
 
 import UIKit
@@ -29,6 +29,18 @@ class MealTableViewController: UITableViewController {
             // Load the sample data.
             loadSampleMeals()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // Load any saved meals, otherwise load sample data.
+        let defaults = UserDefaults.standard
+        
+        
+        if defaults.dictionary(forKey: "user") == nil {
+            performSegue(withIdentifier: "Signup", sender: self)
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -133,6 +145,9 @@ class MealTableViewController: UITableViewController {
             let selectedMeal = meals[indexPath.row]
             mealDetailViewController.meal = selectedMeal
             
+        case "Signup": break
+            
+        case "Login": break
         default:
             fatalError("Unexpected Segue Identifier; \(segue.identifier)")
         }

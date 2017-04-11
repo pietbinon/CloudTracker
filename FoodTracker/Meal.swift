@@ -2,8 +2,8 @@
 //  Meal.swift
 //  FoodTracker
 //
-//  Created by Pierre Binon on 2017-04-11.
-//  Copyright © 2017 Pierre Binon. All rights reserved.
+//  Created by Jane Appleseed on 11/10/16.
+//  Copyright © 2016 Apple Inc. All rights reserved.
 //
 
 import UIKit
@@ -17,6 +17,8 @@ class Meal: NSObject, NSCoding {
     var name: String
     var photo: UIImage?
     var rating: Int
+    //var calories: Int
+    //var mealDescription: String
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
