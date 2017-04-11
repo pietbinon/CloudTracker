@@ -129,9 +129,5 @@ class CloudTrackerAPI: NSObject {
         }
         
         task.resume()
-        
-        // /users/me/meals/:id/photo
-        
-    }
-    
+    }    
 }
