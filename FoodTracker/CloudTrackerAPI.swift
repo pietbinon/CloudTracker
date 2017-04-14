@@ -26,12 +26,12 @@ class CloudTrackerAPI: NSObject {
         let task = URLSession.shared.dataTask(with: req as URLRequest) { (data, resp, err) in
             
             guard let data = data else {
-                print("no data returned from server \(err)")
+                print("no data returned from server \(String(describing: err))")
                 return
             }
             
             guard let resp = resp as? HTTPURLResponse else {
-                print("no response returned from server \(err)")
+                print("no response returned from server \(String(describing: err))")
                 return
             }
             
@@ -70,12 +70,12 @@ class CloudTrackerAPI: NSObject {
         let task = URLSession.shared.dataTask(with: req as URLRequest) { (data, resp, err) in
             
             guard let data = data else {
-                print("no data returned from server \(err)")
+                print("no data returned from server \(String(describing: err))")
                 return
             }
             
             guard let resp = resp as? HTTPURLResponse else {
-                print("no response returned from server \(err)")
+                print("no response returned from server \(String(describing: err))")
                 return
             }
             
@@ -109,13 +109,13 @@ class CloudTrackerAPI: NSObject {
         
         let task = URLSession.shared.dataTask(with: req as URLRequest) { (data, resp, err) in
             
-            guard let data = data else {
-                print("no data returned from server \(err)")
+            guard data != nil else {
+                print("no data returned from server \(String(describing: err))")
                 return
             }
             
             guard let resp = resp as? HTTPURLResponse else {
-                print("no response returned from server \(err)")
+                print("no response returned from server \(String(describing: err))")
                 return
             }
             guard resp.statusCode == 200 else {
